@@ -33,3 +33,7 @@ _your answers here_
   - Blog post about plugins: https://blog.spinnaker.io/spinnakers-extensibility-reaches-new-heights-with-plugins-645fd73f8d6a
   - Doc: https://spinnaker.io/guides/developer/plugin-creators/
 - Question - Auth into single tenant Spinnaker instance from GitHub?
+  - Need to move away from PAT authentication and start using OAuth App or GitHub App instead
+  - Setup to make sure that the GitHub app can talk to Spinnaker. This app can be used to watch for events, etc.
+- Is [GitHub Container Registry](https://github.blog/2020-09-01-introducing-github-container-registry/) compatible with Spinnaker? If not, let's give that feedback to the GitHub team.
+  
