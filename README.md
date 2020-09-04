@@ -23,3 +23,7 @@ _your answers here_
 
 ### How would you like to see GitHub and Spinnaker better integrated?
 _your answers here_
+
+
+## Sync Notes
+- Unknowns: how big of a lift is the proposed project to create a CI integration
