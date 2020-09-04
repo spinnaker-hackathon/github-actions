@@ -13,6 +13,13 @@ _add any existing GH Actions & Spinnaker integrations here_
 
 ### What GitHub Actions would you like to write or see written to help automate your software devliery workflows in Spinnaker?
 _your answers here_
+- Trigger Spinnaker pipelines
+- Retrieve artifacts from Spinnaker stages
+- Retrieve information from Spinnaker pipeline context
+- Retrieve information about a Spinnaker deployment
+- Possibly modify these deployments too
+- Automate pipeline CRUD ops
+- Do things like “Go Get pipeline results and write a comment” (aka an Atlantis kinda thing for Spinnaker execution)
 
 ### How would you like to see GitHub and Spinnaker better integrated?
 _your answers here_
