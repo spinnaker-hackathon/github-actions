@@ -26,8 +26,9 @@ _your answers here_
 
 
 ## Sync Notes
-- Goal: make GitHub part of the Bake stage
+- Goal: make GitHub part of the Bake stage, more native as part of Spinnaker
   - Avoid creating GitHub actions that will be replaced by an integration anyway
+  - Install a GitHub App on your org to facilitate build artifact use in pipelines
 - Unknowns: how big of a lift is the proposed project to create a CI integration
 - Could this be built as a plugin? Probably should be!
   - Blog post about plugins: https://blog.spinnaker.io/spinnakers-extensibility-reaches-new-heights-with-plugins-645fd73f8d6a
@@ -36,4 +37,6 @@ _your answers here_
   - Need to move away from PAT authentication and start using OAuth App or GitHub App instead
   - Setup to make sure that the GitHub app can talk to Spinnaker. This app can be used to watch for events, etc.
 - Is [GitHub Container Registry](https://github.blog/2020-09-01-introducing-github-container-registry/) compatible with Spinnaker? If not, let's give that feedback to the GitHub team.
+- Ige's thoughts - using GitHub actions with Docker
+  - 
   
