@@ -27,6 +27,7 @@ _your answers here_
 
 ## Sync Notes
 - Goal: make GitHub part of the Bake stage
+  - Avoid creating GitHub actions that will be replaced by an integration anyway
 - Unknowns: how big of a lift is the proposed project to create a CI integration
 - Could this be built as a plugin? Probably should be!
   - Blog post about plugins: https://blog.spinnaker.io/spinnakers-extensibility-reaches-new-heights-with-plugins-645fd73f8d6a
