@@ -49,3 +49,7 @@ _your answers here_
   - Rosalind: Loop in Abhilash Gnan, another hackathon volunteer, to this doc & meeting invite
   - Rosalind: Update hackathon repo with info about the Fall event so it's ready to share with collaborators
   
+ ## Sync Notes 9/18
+ - We would love to call this the "GitHub Challenge" at the Spinnaker Summit Gardening hackathon! @John is going to talk with the DevRel org at GitHub
+ 
+  
