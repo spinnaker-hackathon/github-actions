@@ -24,8 +24,9 @@ This is a first priority since it acts as a logical prerequisite to the others (
   - Some central entity such as Armory could host an OAuth app which creates a single entry point, making it easy to configure a dedicated instance for an org -
   - Could have a series of GH Actions that could do this on our behalf - but the problem is you need higher privileges than the Actions app will allow you to
   - Another option: lightest touch without security interference over privileges
+    - __The team determined that this is likely the best proposed architecture__
     - generate a custom app manifest to get the keys that are needed, and this can be used to generate a spinnaker operator config
     - Sample instructions: "we have created you an app manifest in a repo for you, and spinnaker operator in the repo. take these, and apply the app manifest to your org, and then apply the operator config to your spinnaker instance"
     - App manifest flow is not seamless and there are a few complaints about it, but users just need to click a button that sends a request, then it walks you through creating an app. we can suggest an app name to further automate
-    - App manifest flow automation
-    - Creating an app from manifest documenation
+    - [App manifest flow automation](https://github.com/imjohnbo/app-manifest-flow)
+    - [Creating an app from manifest documenation](https://docs.github.com/en/developers/apps/creating-a-github-app-from-a-manifest)
