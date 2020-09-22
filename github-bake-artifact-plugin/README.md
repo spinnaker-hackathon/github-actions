@@ -1,5 +1,7 @@
-# GitHub Bake Artifact Management Plugin 
+# Project 2: GitHub Bake Artifact Management Plugin 
 Goal: Move packages between versions using the workflow dispatch model
+
+## Notes and architecture recommendations from GitHub & Armory about this project
 - Given a Spinnaker app enabled inside the configuration, users can do more closely-knit round robin actions - for example, a github action, through to a build, with the ability to store the artifact in a GH registry. Then in the registry there is a notification that the package is there, which triggers a Spinnaker workflow, which reports back via the GitHub depoyments API, to show where the deployment is for a particular PR. If we can also provide info on ingress controller (external DNS entry for example) - then boom, here's what I just deployed.
 - Look for opportunities to set up more SDLC tasks through actions where there is dual representation of the data. For example, Actions to report relevant into Spinnaker for policy action, such as that an artifact is a certified docker image (that is exposed as part of a Spinnaker workflow)
 - Customer workflow: devs are creating docker images in dev/test environments with tags that use a build # or something similar at the end of the name string. But when they want to move to prod, they will tag the images like releases with a different convention.
