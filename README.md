@@ -1,6 +1,20 @@
-# Github-Actions & Spinnaker
+# Github & Spinnaker Integration Projects
 
-GitHub is collaborating with the Spinnaker community to build a first class GitHub Actions CI integration similar to Spinnaker's integrations with Jenkins, Google Cloud Build, and AWS CodeBuild. This would allow users to leverage Actions as part of a "bake" stage, similar to Jenkins, and would expose Actions artifacts and GitHub Package Registry as artifacts in Spinnaker pipelines. 
+GitHub is collaborating with the Spinnaker community to build a first class GitHub integration! This began with the vision of a CI integration with Actions similar to Spinnaker's integrations with Jenkins, Google Cloud Build, and AWS CodeBuild. This would allow users to leverage Actions as part of a "bake" stage, similar to Jenkins, and would expose Actions artifacts and GitHub Package Registry as artifacts in Spinnaker pipelines. 
+
+In planning the architecture for this, we identified four distinct projects to accomplish a strong integration:
+
+- GitHub App automation for improved token-free auth management for Spinnaker
+- GitHub bake artifact management plugin 
+- Echo | GitHub integration plugin for bi-directional communication with Spinnaker
+- GitHub | Spinnaker status notification triggers plugin
+
+Each of these projects will be posed to the Spinnaker and wider DevOps community as part of our Fall 2020 Spinnaker Summit Gardening Days, a month-long open source hackathon. Teams can compete to build against any of these project suggestions in the GitHub Challenge category for a chance to win a team prize package. 
+
+We have also identified two open source community-purpose Actions project suggestions for the GitHub Challenge that will benefit both the GitHub and Spinnaker communities:
+- GitHub Actions & Forks: Actions should be preserved when private or public repositories are forked. Can we build a workaround? Something that would also automate keeping forks up to date to simplify fork-and-pull-request workflows for OSS contributors who be _excellent_.
+- GitHub Actions for Netlify Accounts: Can we devise a workaround for managing Netlify builds for contributors who are unwilling or unable to create a Netlify account and test their PRs themselves? 
+
 
 ## Prior Art
 _add any existing GH Actions & Spinnaker integrations here_
@@ -110,7 +124,7 @@ Goal: Pick up existing plugin project. @continuouslee built a [Spinnaker plugin]
 - Next steps for this plugin should be to get the metadata from a webhook (head branch, head sha, pull request info, etc.) and pass it into the plugin
 
 
-#### GitHub | Spinnaker Status Plugin
+#### GitHub | Spinnaker Status Notification Triggers Plugin
 Goal: Allow users to configure targetted blocking pipeline stage notifications for specific stages using Status updates
 - Example: people cannot allow merges into a master branch if the current dev package was not successfully deployed
 - Specific example: case around integration testing to validate that an API got updated. Let's say you're writing selenium API deployments to do canary analysis or E2E integration testing. If the canary comes back with a fail, this could send a status back - your memory utilization went to 90% over the baseline, so we're not going to let you merge this code into master.
