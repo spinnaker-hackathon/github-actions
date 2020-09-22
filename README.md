@@ -1,6 +1,6 @@
 # Github & Spinnaker Integration Projects
 
-GitHub is collaborating with the Spinnaker community to build a first class GitHub integration! This began with the vision of a CI integration with Actions similar to Spinnaker's integrations with Jenkins, Google Cloud Build, and AWS CodeBuild. This would allow users to leverage Actions as part of a "bake" stage, similar to Jenkins, and would expose Actions artifacts and GitHub Package Registry as artifacts in Spinnaker pipelines. 
+GitHub is collaborating with the Spinnaker community to build a first class GitHub integration at Spinnaker Summit Gardening Days! This began with the vision of a CI integration with Actions similar to Spinnaker's integrations with Jenkins, Google Cloud Build, and AWS CodeBuild. This would allow users to leverage Actions as part of a "bake" stage, similar to Jenkins, and would expose Actions artifacts and GitHub Package Registry as artifacts in Spinnaker pipelines. 
 
 In planning the architecture for this, we identified four distinct projects to accomplish a strong integration:
 
