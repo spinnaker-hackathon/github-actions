@@ -7,7 +7,7 @@ In planning the architecture for this, we identified four distinct projects to a
 - GitHub App automation for improved token-free auth management for Spinnaker
 - GitHub bake artifact management plugin 
 - Echo | GitHub integration plugin for bi-directional communication with Spinnaker
-- GitHub | Spinnaker status notification triggers plugin
+- GitHub | Spinnaker status notification gating plugin
 
 Each of these projects will be posed to the Spinnaker and wider DevOps community as part of our Fall 2020 Spinnaker Summit Gardening Days, a month-long open source hackathon. Teams can compete to build against any of these project suggestions in the GitHub Challenge category for a chance to win a team prize package. 
 
