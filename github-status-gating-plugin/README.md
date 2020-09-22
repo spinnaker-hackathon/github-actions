@@ -1,5 +1,5 @@
 # GitHub | Spinnaker Status Notification Gating Plugin
-Goal: Allow users to configure targetted blocking pipeline stage notifications for specific stages using Status updates
+Goal: Allow users to configure targetted blocking pipeline stage notifications as gates for dependent stages using Status updates
 
 ## Notes and architecture recommendations from GitHub & Armory about this project
 - Example: people cannot allow merges into a master branch if the current dev package was not successfully deployed
