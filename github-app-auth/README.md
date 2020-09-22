@@ -13,6 +13,8 @@ This is a first priority since it acts as a logical prerequisite to the others (
   - 100 instances of Spinnaker all wanting to communicate to one GH instance through an app may require creating an individual Spinnaker app for each instance, but this depends on what we need access to
   - Webhook and oauth URLs will be different for each one. each single tenant spinnaker instance can receive webhooks
   - A feature is built into apps to send our webhooks to the URL configured in the app settings, but in a normal gh app model with marketplace install, that is referring to a single SaaS instance.
+
+### Proposed workflows
 - Manual Workflow:
   - go through the app manifest flow and identify the permissions and events needed in yaml or json
   - make a post to a url at gh.com - this will walk people through creating their own spinnaker app
