@@ -28,6 +28,7 @@ _add any existing GH Actions & Spinnaker integrations here_
 ### Spinnaker Feature Requests for GitHub and Actions
 
 __What GitHub Actions would you like to write or see written to help automate your software devliery workflows in Spinnaker?__
+
 _your answers here_
 - Trigger Spinnaker pipelines
 - Retrieve artifacts from Spinnaker stages
