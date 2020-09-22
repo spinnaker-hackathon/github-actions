@@ -4,7 +4,7 @@ GitHub is collaborating with the Spinnaker community to build a first class GitH
 
 In planning the architecture for this, we identified four distinct projects to accomplish a strong integration:
 
-- GitHub App automation for improved token-free auth management for Spinnaker
+- [GitHub App automation for improved token-free auth management for Spinnaker](https://github.com/spinnaker-hackathon/github-actions/tree/master/github-app-auth)
 - [GitHub bake artifact management plugin](https://github.com/spinnaker-hackathon/github-actions/tree/master/github-bake-artifact-plugin)
 - [Echo | GitHub integration plugin for bi-directional communication with Spinnaker](https://github.com/spinnaker-hackathon/github-actions/tree/master/github-echo-plugin)
 - [GitHub | Spinnaker status notification gating plugin](https://github.com/spinnaker-hackathon/github-actions/blob/master/github-status-gating-plugin)
