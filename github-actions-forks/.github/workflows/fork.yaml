@@ -1,0 +1,26 @@
+name: Fork OSS
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: clone the repo
+        run: git clone https://github.com/kubernetes-sigs/kubespray.git
+
+      - name: Add 'upstream' repo to list of remotes
+        run: git remote add upstream https://github.com/kubernetes-sigs/kubespray.git
+
+      - name: Verify the new remote named 'upstream'
+        run: git remote -v
+
+      - name: Fetch from upstream remote
+        run: git fetch upstream
+
+      - name: View all branches, including those from upstream
+        run: git branch -va
+
+      - name: Checkout your master branch and merge upstream
+        run: git checkout master && git merge upstream/master
