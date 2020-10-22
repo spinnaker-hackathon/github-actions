@@ -1,6 +1,10 @@
 name: Fork OSS
 
-on: push
+on:  
+  push:
+  pull_request:
+  schedule:
+    - cron: '0 0 * * *'  # every day at midnigh
 
 jobs:
   build:
@@ -8,10 +12,10 @@ jobs:
 
     steps:
       - name: clone the repo
-        run: git clone https://github.com/kubernetes-sigs/kubespray.git
+        run: ${repository}
 
       - name: Add 'upstream' repo to list of remotes
-        run: git remote add upstream https://github.com/kubernetes-sigs/kubespray.git
+        run: git remote add upstream ${repository}
 
       - name: Verify the new remote named 'upstream'
         run: git remote -v
@@ -24,3 +28,7 @@ jobs:
 
       - name: Checkout your master branch and merge upstream
         run: git checkout master && git merge upstream/master
+
+    env:
+      CI: true
+      repository: https://github.com/kubernetes-sigs/kubespray.git
