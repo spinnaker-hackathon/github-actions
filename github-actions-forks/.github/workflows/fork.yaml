@@ -3,32 +3,31 @@ name: Fork OSS
 on:  
   push:
   pull_request:
+    types: ['opened', 'edited', 'reopened', 'synchronize']
   schedule:
-    - cron: '0 0 * * *'  # every day at midnigh
+    - cron: '0 0 * * *'  # every day at midnight
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: clone the repo
-        run: ${repository}
+    - uses: actions/checkout@v2
+      with:
+        name: kubernetes-sigs/kubespray.git
+    - run: git remote add upstream ${repository} #Add upstream repo to list of remotes
+    
+    - name: Verify the new remote named upstream
+      run: git remote -v
 
-      - name: Add 'upstream' repo to list of remotes
-        run: git remote add upstream ${repository}
+    - name: Fetch from upstream remote
+      run: git fetch upstream
 
-      - name: Verify the new remote named 'upstream'
-        run: git remote -v
+    - name: View all branches, including those from upstream
+      run: git branch -va
 
-      - name: Fetch from upstream remote
-        run: git fetch upstream
-
-      - name: View all branches, including those from upstream
-        run: git branch -va
-
-      - name: Checkout your master branch and merge upstream
-        run: git checkout master && git merge upstream/master
+    - name: Checkout your master branch and merge upstream
+      run: git checkout master && git merge upstream/master
 
     env:
       CI: true
-      repository: https://github.com/kubernetes-sigs/kubespray.git
+      repository: "https://github.com/kubernetes-sigs/kubespray.git"
