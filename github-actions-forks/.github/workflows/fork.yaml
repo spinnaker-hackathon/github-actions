@@ -14,8 +14,10 @@ jobs:
     - uses: actions/checkout@v2
       with:
         name: kubernetes-sigs/kubespray.git
-    - run: git remote add upstream ${repository} #Add upstream repo to list of remotes
     
+    - name: Add upstream repo to list of remotes
+    - run: git remote add upstream ${repository} #
+
     - name: Verify the new remote named upstream
       run: git remote -v
 
